@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/myToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:minHeight="?android:attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/leftIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Report Issue"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+        <ImageView
+            android:id="@+id/history"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:src="@drawable/history_icon" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    Category-->
+
+    <EditText
+        android:id="@+id/category_box"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_field"
+        android:hint="Select Category"
+        android:textColorHint="#B5B3B3"
+        android:inputType="text"
+        android:drawableEnd="@drawable/arrow_down"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/category"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/category"
+        app:layout_constraintTop_toBottomOf="@+id/category" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Category"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myToolBar" />
+
+    <TextView
+        android:id="@+id/required_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="*"
+        android:layout_marginStart="5dp"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/category_box"
+        app:layout_constraintStart_toEndOf="@+id/category"
+        app:layout_constraintTop_toBottomOf="@+id/myToolBar"
+        app:layout_constraintVertical_bias="0.64" />
+
+<!--     Locality-->
+
+    <EditText
+        android:id="@+id/locality_box"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:background="@drawable/edit_field"
+        android:drawableEnd="@drawable/arrow_down"
+        android:hint="Select Locality"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#B5B3B3"
+        app:layout_constraintEnd_toEndOf="@+id/locality"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/locality"
+        app:layout_constraintTop_toBottomOf="@+id/locality" />
+
+    <TextView
+        android:id="@+id/locality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Locality"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/category_box"
+        app:layout_constraintTop_toBottomOf="@+id/category_box" />
+
+    <TextView
+        android:id="@+id/required_locality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="*"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/locality"
+        app:layout_constraintTop_toBottomOf="@+id/category_box" />
+
+
+<!--    Pin the Location-->
+
+    <!--    Comments-->
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Pin the Location   ⃰⃰⃰"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/locality_box"
+        app:layout_constraintTop_toBottomOf="@+id/locality_box" />
+
+    <EditText
+        android:id="@+id/location_box"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_field"
+        android:drawableEnd="@drawable/location_icon"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#B5B3B3"
+        app:layout_constraintEnd_toEndOf="@+id/location"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Comments"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/location_box"
+        app:layout_constraintTop_toBottomOf="@+id/location_box" />
+
+    <EditText
+        android:id="@+id/comment_box"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_field"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#B5B3B3"
+        app:layout_constraintEnd_toEndOf="@+id/comments"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="@+id/comments"
+        app:layout_constraintTop_toBottomOf="@+id/comments" />
+
+    <TextView
+        android:id="@+id/required_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="*"
+        android:textColor="#FF0000"
+        android:layout_marginStart="5dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/comments"
+        app:layout_constraintTop_toBottomOf="@+id/location_box" />
+
+<!--    Add Image -->
+
+    <ImageView
+        android:id="@+id/add_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/comment_box"
+        app:layout_constraintTop_toBottomOf="@+id/comment_box"
+        app:srcCompat="@drawable/add_btn" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Add Image"
+        android:textColor="#4F4F4F"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/comment_box"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toEndOf="@+id/add_btn"
+        app:layout_constraintTop_toBottomOf="@+id/comment_box" />
+
+    <TextView
+        android:id="@+id/textView_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Upload the images of issue"
+        android:textColor="#828282"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <LinearLayout
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/add_btn"
+        app:layout_constraintTop_toBottomOf="@+id/textView_subtitle">
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/image_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/delete_btn"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signupbtn"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ripple_blue"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
